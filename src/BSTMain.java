@@ -20,5 +20,7 @@ public class BSTMain {
         bst.inorderTraversal();
         System.out.println("");
         System.out.println("Size: " + bst.size());
+
+        System.out.println("63 exists: " + bst.search(63));
     }
 }

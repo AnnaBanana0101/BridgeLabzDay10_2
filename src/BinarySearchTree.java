@@ -61,6 +61,32 @@ public class BinarySearchTree<T extends Comparable<T>>{
         return size(root.left) + size(root.right) + 1;
     }
 
+    public boolean search(T data)
+    {
+        return search(root, data);
+    }
+
+    private boolean search(Node<T> root, T data) {
+
+        
+        if(root == null)
+        {
+            return false;
+        }
+
+        if(data.compareTo(root.data)==0)
+            return true;
+
+        if(data.compareTo(root.data)<0)
+        {
+            return search(root.left, data);
+        }
+        else
+        {
+            return search(root.right, data);
+        }
+
+    }
 
     
 }
