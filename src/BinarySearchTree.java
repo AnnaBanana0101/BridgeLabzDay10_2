@@ -49,5 +49,18 @@ public class BinarySearchTree<T extends Comparable<T>>{
 
     }
 
+    public int size() {
+       return size(root);
+    }
+
+    private int size(Node<T> root) {
+
+        if(root==null)
+            return 0;
+
+        return size(root.left) + size(root.right) + 1;
+    }
+
+
     
 }
